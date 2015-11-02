@@ -21,50 +21,62 @@ public class SystemOutRepoImpl<ObjectType, KeyType> implements Repository<Object
 
     @Override
     public ObjectType create(ObjectType object) {
-        System.out.printf("Wrote object of type [%s] to memory\n", object.getClass().getSimpleName());
-        memoryDb.add(object);
-        return object;
+        Object id = getId(getIdField(object), object);
+        if (!idTaken(id)) {
+            System.out.printf("Wrote object of type [%s] to memory\n", object.getClass().getSimpleName());
+            memoryDb.add(object);
+            return object;
+        } else {
+            throw new UnsupportedOperationException(String.format("Object with id %s already in database", id));
+        }
     }
 
-    /* Since we work in parallel, findAny has a better performance than findFirst.
-    *
-    * This method iterates over each object in the arraylist.
-    * For each object, it iterates over the fields.
-    * If the field contains the PersistenceId annotation, we look if it's value is equal to the given key.
-    *
-    * If previously mentioned field has a difference type than the generic KeyType, a TypeMismatchException will be thrown.
-    * */
+    private boolean idTaken(Object id) {
+        for (ObjectType o : memoryDb) {
+            if (getId(getIdField(o), o).equals(id))
+                return true;
+        }
+        return false;
+    }
+
+    private Object getId(Field idField, ObjectType o) {
+        Object id = null;
+        try {
+            id = idField.get(o);
+        } catch (IllegalAccessException ignored) {
+            /* This never occurs since we have set the field accessible */
+        }
+        return id;
+    }
+
+    /* Since we work in parallel, findAny has a better performance than findFirst */
+    private Field getIdField(Object object) {
+        Class cls = object.getClass();
+        Field[] declaredFields = cls.getDeclaredFields();
+        return Arrays.asList(declaredFields).stream().parallel()
+                .filter(f -> {
+                    f.setAccessible(true);
+                    return f.isAnnotationPresent(PersistenceId.class);
+                }).findAny().get();
+    }
+
+    /* Since we work in parallel, findAny has a better performance than findFirst */
     @Override
     public ObjectType read(KeyType key) {
         ObjectType value;
         try {
             value = memoryDb.stream().parallel()
                     .filter(o -> {
-                        Class cls = o.getClass();
-                        Field[] declaredFields = cls.getDeclaredFields();
-                        Field idField = Arrays.asList(declaredFields).stream().parallel()
-                                .filter(f -> {
-                                    f.setAccessible(true);
-                                    return f.isAnnotationPresent(PersistenceId.class);
-                                }).findAny().get();
-                        try {
-                            if (idField.get(o).getClass() != key.getClass())
-                                throw new TypeMismatchException(String.format("PersistenceId annotation on type %s but should be on type %s instead",
-                                        idField.get(o).getClass(), key.getClass()));
-                            return idField.get(o).equals(key);
-                        } catch (IllegalAccessException ignored) {
-                            /* This never occurs since we have set the field accessible */
-                        }
-                        return false;
+                        Object id = getId(getIdField(o), o);
+                        if (id.getClass() != key.getClass())
+                            throw new TypeMismatchException(String.format("PersistenceId annotation on type %s but should be on type %s instead",
+                                    id.getClass(), key.getClass()));
+                        return id.equals(key);
                     }).findAny().get();
         } catch (NoSuchElementException e) {
             throw new NoSuchElementException(String.format("No such key found: %s", key.toString()));
         }
         return value;
-    }
-
-    private boolean typeMatch(Class type1, Class type2) {
-        return type1 == type2;
     }
 
     @Override
@@ -74,6 +86,6 @@ public class SystemOutRepoImpl<ObjectType, KeyType> implements Repository<Object
 
     @Override
     public void delete(KeyType key) {
-
+        memoryDb.remove(read(key));
     }
 }
