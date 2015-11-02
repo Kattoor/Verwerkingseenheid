@@ -1,26 +1,26 @@
 package be.kdg.schelderadarketen.verwerkingseenheid.persistence;
 
-public interface Repository<ObjectType, KeyType> {
+public interface Repository<V, K> {
 
     /**
      * @param object object
      * @return returns object
      */
-    public ObjectType create(ObjectType object);
+    public V create(V object);
 
     /**
      * @param key the key at which the desired value is stored
      * @return returns the value
      */
-    public ObjectType read(KeyType key);
+    public V read(K key);
 
     /**
      * @param object object to update
      */
-    public void update(ObjectType object);
+    public void update(V object);
 
     /**
      * @param key the key at which the object to be removed is stored
      */
-    public void delete(KeyType key);
+    public void delete(K key);
 }
