@@ -19,10 +19,13 @@ public class Main {
 
     public static void main(String[] argv) throws IOException, InterruptedException, TimeoutException {
         Repository<PositionMessage, Integer> repo = new SystemOutRepoImpl<>();
-        StringInputListener<PositionMessage> inputHandler = new StringInputListener<>(PositionMessage.class);
-        inputHandler.setQueue(new RabbitQueue<>("localhost", "ping", inputHandler));
+        /* Due to type erasure we have to pass our PositionMessage class to the constructor of the StringInputListener */
+        StringInputListener<PositionMessage> inputListener = new StringInputListener<>(PositionMessage.class);
+        /* We pass our inputListener so the queue knows who to notify when it receives data */
+        inputListener.setQueue(new RabbitQueue<>("localhost", "ping", inputListener));
         DataProcessingStrategy<PositionMessage> dataProcessingStrategy = new SaveToDatabaseStrategy<>(repo);
-        inputHandler.setStrategy(dataProcessingStrategy);
+        /* We inject the chosen strategy in the inputListener so it knows what to do when it receives data */
+        inputListener.setStrategy(dataProcessingStrategy);
     }
 
     public static <T> T parseMessage(Class<T> c, String message) {
