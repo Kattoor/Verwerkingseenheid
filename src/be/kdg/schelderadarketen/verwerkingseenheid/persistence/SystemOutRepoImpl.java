@@ -1,7 +1,6 @@
-package be.kdg.schelderadarketen.verwerkingseenheid.persistence.impl;
+package be.kdg.schelderadarketen.verwerkingseenheid.persistence;
 
 import be.kdg.schelderadarketen.verwerkingseenheid.domain.PersistenceId;
-import be.kdg.schelderadarketen.verwerkingseenheid.persistence.Repository;
 import com.sun.corba.se.impl.io.TypeMismatchException;
 
 import java.lang.reflect.Field;
@@ -22,7 +21,7 @@ public class SystemOutRepoImpl<V, K> implements Repository<V, K> {
     public V create(V value) {
         K key = getId(getIdField(value), value);
         if (!keyTaken(key)) {
-            System.out.printf("Wrote value of type [%s] to memory\n", value.getClass().getSimpleName());
+            System.out.printf("Wrote value of type [%s] to memory: %s\n", value.getClass().getSimpleName(), value);
             memoryDb.add(value);
             return value;
         } else {

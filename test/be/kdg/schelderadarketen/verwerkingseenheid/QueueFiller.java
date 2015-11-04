@@ -26,7 +26,7 @@ public class QueueFiller {
     public QueueFiller() {
         try {
             init();
-            generateMessages(10000).parallelStream().forEach(m -> {
+            generateMessages(4).parallelStream().forEach(m -> {
                 Writer w = new StringWriter();
                 try {
                     Marshaller.marshal(m, w);
