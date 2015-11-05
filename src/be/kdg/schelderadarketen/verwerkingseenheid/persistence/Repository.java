@@ -1,5 +1,10 @@
 package be.kdg.schelderadarketen.verwerkingseenheid.persistence;
 
+/**
+ *
+ * @param <V> Type to be stored
+ * @param <K> Type used as key
+ */
 public interface Repository<V, K> {
 
     /**

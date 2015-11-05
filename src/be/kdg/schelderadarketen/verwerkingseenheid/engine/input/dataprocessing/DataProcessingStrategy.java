@@ -1,6 +1,6 @@
 package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessing;
 
-public interface DataProcessingStrategy<V> {
+public interface DataProcessingStrategy {
 
-    void processData(V v);
+    void processData(String data);
 }

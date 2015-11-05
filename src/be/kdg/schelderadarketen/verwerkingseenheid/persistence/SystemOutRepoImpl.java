@@ -39,7 +39,7 @@ public class SystemOutRepoImpl<V, K> implements Repository<V, K> {
 
     /*
     * Explicitly casting oId to K generates an unchecked cast warning.
-    * Since the Reflection API does not use Generics, this warning can't be avoided.
+    * Since the Reflection API does not use Generics, this warning cannot be avoided.
     * Due to type erasure (K is a generic), we cannot use: id = K.class.cast(oId);
     * */
     private @SuppressWarnings("unchecked") K getId(Field idField, V value) {

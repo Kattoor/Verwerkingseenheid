@@ -1,6 +1,6 @@
 package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.rabbitmq;
 
-import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.InputListener;
+import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.InputHandler;
 import com.rabbitmq.client.*;
 
 import java.io.IOException;
@@ -16,9 +16,9 @@ import java.util.concurrent.TimeoutException;
 public class RabbitQueue<T> implements Pollable<String> {
 
     private Queue<String> messages;
-    private InputListener<String, T> listener;
+    private InputHandler<String> listener;
 
-    public RabbitQueue(String host, String queueName, InputListener<String, T> listener) throws IOException, TimeoutException {
+    public RabbitQueue(String host, String queueName, InputHandler<String> listener) throws IOException, TimeoutException {
         messages = new LinkedList<>();
         this.listener = listener;
         init(host, queueName);
