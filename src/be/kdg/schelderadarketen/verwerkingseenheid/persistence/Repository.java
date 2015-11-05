@@ -1,5 +1,7 @@
 package be.kdg.schelderadarketen.verwerkingseenheid.persistence;
 
+import java.util.List;
+
 /**
  *
  * @param <V> Type to be stored
@@ -18,6 +20,12 @@ public interface Repository<V, K> {
      * @return returns the value
      */
     public V read(K key);
+
+    /**
+     *
+     * @return returns all values
+     */
+    public List<V> readAll();
 
     /**
      * @param object object to update

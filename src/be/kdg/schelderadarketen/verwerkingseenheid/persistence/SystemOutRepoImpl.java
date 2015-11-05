@@ -85,6 +85,11 @@ public class SystemOutRepoImpl<V, K> implements Repository<V, K> {
     }
 
     @Override
+    public List<V> readAll() {
+        return new ArrayList<>(memoryDb);
+    }
+
+    @Override
     public void update(V value) {
         K key = getId(getIdField(value), value);
         delete(key);

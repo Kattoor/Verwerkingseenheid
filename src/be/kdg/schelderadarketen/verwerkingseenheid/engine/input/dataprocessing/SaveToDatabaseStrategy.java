@@ -6,7 +6,6 @@ import be.kdg.schelderadarketen.verwerkingseenheid.persistence.Repository;
 public class SaveToDatabaseStrategy<V> implements DataProcessingStrategy {
 
     private Repository<V, ?> repo;
-
     private Class<V> cls;
 
     public SaveToDatabaseStrategy(Repository<V, ?> repo, Class<V> cls) {
@@ -16,7 +15,6 @@ public class SaveToDatabaseStrategy<V> implements DataProcessingStrategy {
 
     @Override
     public void processData(String data) {
-        System.out.println("kkkk: " + cls);
         V v = Main.parseMessage(cls, data);
         repo.create(v);
     }
