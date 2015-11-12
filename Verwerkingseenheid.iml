@@ -10,5 +10,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="castor-1.3.1" level="project" />
     <orderEntry type="library" name="rabbitmq-client" level="project" />
+    <orderEntry type="library" name="shipservice-1.0" level="project" />
+    <orderEntry type="library" name="gson-2.4" level="project" />
   </component>
 </module>

@@ -1,4 +1,4 @@
-package be.kdg.schelderadarketen.verwerkingseenheid.domain;
+package be.kdg.schelderadarketen.verwerkingseenheid.persistence.memoryDb;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

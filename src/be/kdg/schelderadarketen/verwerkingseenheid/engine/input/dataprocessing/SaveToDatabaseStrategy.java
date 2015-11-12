@@ -1,6 +1,6 @@
 package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessing;
 
-import be.kdg.schelderadarketen.verwerkingseenheid.Main;
+import be.kdg.schelderadarketen.verwerkingseenheid.engine.utils.MarshallUtil;
 import be.kdg.schelderadarketen.verwerkingseenheid.persistence.Repository;
 
 public class SaveToDatabaseStrategy<V> implements DataProcessingStrategy {
@@ -15,7 +15,7 @@ public class SaveToDatabaseStrategy<V> implements DataProcessingStrategy {
 
     @Override
     public void processData(String data) {
-        V v = Main.parseMessage(cls, data);
+        V v = MarshallUtil.parseMessage(cls, data);
         repo.create(v);
     }
 }

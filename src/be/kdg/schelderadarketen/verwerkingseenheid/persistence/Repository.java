@@ -36,4 +36,9 @@ public interface Repository<V, K> {
      * @param key the key at which the object to be removed is stored
      */
     public void delete(K key);
+
+    /**
+     * @param field to distinguish what field to check
+     */
+    public List<V> readAllBy(String field, Object fieldValue);
 }

@@ -1,6 +1,6 @@
 package be.kdg.schelderadarketen.verwerkingseenheid;
 
-import be.kdg.schelderadarketen.verwerkingseenheid.domain.PositionMessage;
+import be.kdg.schelderadarketen.verwerkingseenheid.domain.models.PositionMessage;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
