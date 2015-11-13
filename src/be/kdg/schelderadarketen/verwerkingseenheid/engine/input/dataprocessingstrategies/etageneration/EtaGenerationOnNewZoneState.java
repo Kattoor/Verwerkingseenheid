@@ -1,4 +1,4 @@
-package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessing.etageneration;
+package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessingstrategies.etageneration;
 
 import be.kdg.schelderadarketen.verwerkingseenheid.domain.models.PositionMessage;
 

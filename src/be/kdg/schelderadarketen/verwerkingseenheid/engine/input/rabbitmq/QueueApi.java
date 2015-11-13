@@ -1,7 +1,8 @@
 package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.rabbitmq;
 
-public interface Pollable<T> {
+public interface QueueApi<T> {
 
     void initialize();
     T poll();
+    void offer(T t);
 }

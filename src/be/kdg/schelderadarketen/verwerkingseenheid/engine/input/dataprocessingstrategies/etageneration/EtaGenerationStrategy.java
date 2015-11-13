@@ -1,7 +1,7 @@
-package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessing.etageneration;
+package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessingstrategies.etageneration;
 
 import be.kdg.schelderadarketen.verwerkingseenheid.domain.models.PositionMessage;
-import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessing.DataProcessingStrategy;
+import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessingstrategies.DataProcessingStrategy;
 import be.kdg.schelderadarketen.verwerkingseenheid.engine.utils.MarshallUtil;
 
 import java.util.HashMap;
@@ -25,7 +25,9 @@ public class EtaGenerationStrategy implements DataProcessingStrategy {
 
     @Override
     public void processData(String data) {
-        PositionMessage newPositionMessage = MarshallUtil.parseMessage(PositionMessage.class, data);
+        if (data.contains("<incident>")) return;
+
+        PositionMessage newPositionMessage = MarshallUtil.unmarshall(PositionMessage.class, data);
         int shipId = newPositionMessage.getShipId();
         PositionMessage previousPositionMessage = ships.get(shipId);
 

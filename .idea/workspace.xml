@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a4a474d-8cb3-4e8a-8fdc-ade3cbc404ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationEachPositionMessageState.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationOnNewZoneState.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationState.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/shipservice/ShipInformationServiceImpl.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/shipservice/ShipInformationServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/ShipServiceTest.java" afterPath="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/ShipServiceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/Incident.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/IncidentActionReport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/IncidentActionStrategy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/IncidentFiller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/InputHandler.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/InputHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/utils/MarshallUtil.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/utils/MarshallUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/RabbitQueue.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/RabbitQueue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/StringInputHandler.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/StringInputHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/TestEngine.java" afterPath="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/TestEngine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="F:\KdG\Jaar3\SE\Schelderadarketen\Verwerkingseenheid\src\be\kdg\schelderadarketen\verwerkingseenheid\engine\input\dataprocessing\DataProcessingStrategy.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/DataProcessingStrategy.java" />
+      <change type="MOVED" beforePath="F:\KdG\Jaar3\SE\Schelderadarketen\Verwerkingseenheid\src\be\kdg\schelderadarketen\verwerkingseenheid\engine\input\dataprocessing\MemoryBufferStrategy.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/MemoryBufferStrategy.java" />
+      <change type="MOVED" beforePath="F:\KdG\Jaar3\SE\Schelderadarketen\Verwerkingseenheid\src\be\kdg\schelderadarketen\verwerkingseenheid\engine\input\dataprocessing\PositionMessageMemoryBufferStrategy.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/PositionMessageMemoryBufferStrategy.java" />
+      <change type="MOVED" beforePath="F:\KdG\Jaar3\SE\Schelderadarketen\Verwerkingseenheid\src\be\kdg\schelderadarketen\verwerkingseenheid\engine\input\dataprocessing\SaveToDatabaseStrategy.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/SaveToDatabaseStrategy.java" />
+      <change type="MOVED" beforePath="F:\KdG\Jaar3\SE\Schelderadarketen\Verwerkingseenheid\src\be\kdg\schelderadarketen\verwerkingseenheid\engine\input\dataprocessing\etageneration\EtaGenerationEachPositionMessageState.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/etageneration/EtaGenerationEachPositionMessageState.java" />
+      <change type="MOVED" beforePath="F:\KdG\Jaar3\SE\Schelderadarketen\Verwerkingseenheid\src\be\kdg\schelderadarketen\verwerkingseenheid\engine\input\dataprocessing\etageneration\EtaGenerationOnNewZoneState.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/etageneration/EtaGenerationOnNewZoneState.java" />
+      <change type="MOVED" beforePath="F:\KdG\Jaar3\SE\Schelderadarketen\Verwerkingseenheid\src\be\kdg\schelderadarketen\verwerkingseenheid\engine\input\dataprocessing\etageneration\EtaGenerationState.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/etageneration/EtaGenerationState.java" />
+      <change type="MOVED" beforePath="F:\KdG\Jaar3\SE\Schelderadarketen\Verwerkingseenheid\src\be\kdg\schelderadarketen\verwerkingseenheid\engine\input\dataprocessing\etageneration\EtaGenerationStrategy.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/etageneration/EtaGenerationStrategy.java" />
+      <change type="MOVED" beforePath="F:\KdG\Jaar3\SE\Schelderadarketen\Verwerkingseenheid\src\be\kdg\schelderadarketen\verwerkingseenheid\engine\input\rabbitmq\Pollable.java" afterPath="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/QueueApi.java" />
     </list>
     <ignored path="Verwerkingseenheid.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,21 +46,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PositionMessage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/PositionMessage.java">
+      <file leaf-file-name="Incident.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/Incident.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/InputHandler.java">
+      <file leaf-file-name="IncidentActionStrategy.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/IncidentActionStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.7834395" vertical-offset="413" max-vertical-offset="986">
+              <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,90 +68,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestEngine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IncidentFiller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/IncidentFiller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="476">
+              <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShipInformationServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/shipservice/ShipInformationServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1156">
+              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestEngine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/TestEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5349345" vertical-offset="282" max-vertical-offset="867">
-              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="935">
+              <caret line="38" column="73" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShipServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/ShipServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EtaGenerationStrategy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="799">
-              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#845#846#0" expanded="true" />
-                <element signature="e#879#880#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EtaGenerationOnNewZoneState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationOnNewZoneState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EtaGenerationEachPositionMessageState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationEachPositionMessageState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-              <caret line="8" column="88" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EtaGenerationState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueueFiller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/QueueFiller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1139">
-              <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SaveToDatabaseStrategy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/SaveToDatabaseStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-              <caret line="17" column="51" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="51" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -153,16 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/PositionMessage.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/persistence/impl/SystemOutRepoImpl.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/sup.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/Pollable.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/RabbitQueue.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/MessageProcessingStrategy.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/MessageProcessingStrategy.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/DataProcessingStrategy.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/SaveToDatabaseStrategy.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/InputListener.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/StringInputListener.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/DataProcessingStrategy.java" />
         <option value="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/QueueFiller.java" />
@@ -178,7 +127,6 @@
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/SaveToDatabaseStrategy.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/StartablePoll.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/Pollable.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/RabbitQueue.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/Engine.java" />
         <option value="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/Main.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/wrappers/TimeWrapper.java" />
@@ -187,23 +135,34 @@
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/InputHandler.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/shipservice/ShipInformationService.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/gson/GsonDeserializer.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/utils/MarshallUtil.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/utils/GsonDeserializer.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/shipservice/UnknownShipIdException.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/PositionMessageMemoryBufferStrategy.java" />
-        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/ShipInformation.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/wrappers/PositionMessageWrapper.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/Cargo.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/ShipInformationError.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/PositionMessage.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/shipservice/ShipInformationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/EtaGenerationStrategy.java" />
-        <option value="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/TestEngine.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationEachPositionMessageState.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationOnNewZoneState.java" />
         <option value="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/ShipServiceTest.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationStrategy.java" />
         <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationState.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/Offerable.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/Queue.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/RabbitCustomQueue.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/utils/MarshallUtil.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/etageneration/EtaGenerationStrategy.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/SaveToDatabaseStrategy.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/PositionMessageMemoryBufferStrategy.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/Incident.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/RabbitQueue.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/ShipInformation.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/IncidentActionReport.java" />
+        <option value="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/TestEngine.java" />
+        <option value="$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/IncidentFiller.java" />
+        <option value="$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/IncidentActionStrategy.java" />
       </list>
     </option>
   </component>
@@ -296,6 +255,36 @@
               <option name="myItemId" value="verwerkingseenheid" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="persistence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="persistence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="memoryDb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -316,6 +305,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,7 +364,119 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dataprocessing" />
+              <option name="myItemId" value="shipservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="input" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rabbitmq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="input" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataprocessingstrategies" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrappers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verwerkingseenheid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,7 +513,7 @@
       <recent name="be.kdg.schelderadarketen.verwerkingseenheid" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QueueFiller">
+  <component name="RunManager" selected="Application.IncidentFiller">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -512,6 +617,28 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="IncidentFiller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="be.kdg.schelderadarketen.verwerkingseenheid.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="be.kdg.schelderadarketen.verwerkingseenheid.IncidentFiller" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Verwerkingseenheid" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -758,18 +885,20 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="Application.QueueFiller" />
       <item index="2" class="java.lang.String" itemvalue="Application.TestEngine" />
       <item index="3" class="java.lang.String" itemvalue="Application.ShipServiceTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.IncidentFiller" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.QueueFiller" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.IncidentFiller" />
         <item index="1" class="java.lang.String" itemvalue="Application.TestEngine" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ShipServiceTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Application.QueueFiller" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ShipServiceTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -798,7 +927,7 @@
       <workItem from="1447192745615" duration="99000" />
       <workItem from="1447201286322" duration="636000" />
       <workItem from="1447333070646" duration="92000" />
-      <workItem from="1447344050573" duration="18025000" />
+      <workItem from="1447344050573" duration="23327000" />
     </task>
     <task id="LOCAL-00001" summary="Testing the test folder">
       <created>1446212022854</created>
@@ -866,11 +995,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447369703318</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="c:">
+      <created>1447373723200</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1447373723200</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72519000" />
+    <option name="totallyTimeSpent" value="77821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -888,10 +1023,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Kotlin Bytecode" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31456044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31456044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34190232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34190232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -940,64 +1075,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/persistence/memoryDb/SystemOutRepoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="1700">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#1574#1604#0" expanded="true" />
-            <element signature="e#3695#3696#0" expanded="true" />
-            <element signature="e#3743#3744#0" expanded="true" />
-            <element signature="e#3950#3951#0" expanded="true" />
-            <element signature="e#3992#3993#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/PositionMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="663">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/persistence/Repository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="544">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/TestEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1598">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/persistence/memoryDb/SystemOutRepoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#1574#1604#0" expanded="true" />
-            <element signature="e#3695#3696#0" expanded="true" />
-            <element signature="e#3743#3744#0" expanded="true" />
-            <element signature="e#3950#3951#0" expanded="true" />
-            <element signature="e#3992#3993#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/persistence/Repository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="544">
@@ -1136,97 +1213,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/Pollable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/RabbitQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/persistence/memoryDb/PersistenceId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/wrappers/TimeWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="799">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/DataProcessingStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/persistence/memoryDb/SystemOutRepoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1977" max-vertical-offset="2448">
-          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#1574#1604#0" expanded="true" />
-            <element signature="e#3695#3696#0" expanded="true" />
-            <element signature="e#3743#3744#0" expanded="true" />
-            <element signature="e#3950#3951#0" expanded="true" />
-            <element signature="e#3992#3993#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/StringInputHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/utils/MarshallUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/utils/GsonDeserializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="false" />
+            <element signature="e#246#247#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1236,45 +1229,8 @@
         <state vertical-scroll-proportion="0.17" vertical-offset="0" max-vertical-offset="700">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/MemoryBufferStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04857143" vertical-offset="0" max-vertical-offset="700">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/shipservice/ShipInformationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14571428" vertical-offset="0" max-vertical-offset="700">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/ShipInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="235" max-vertical-offset="731">
-          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
-          <folding>
-            <element signature="e#339#366#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#520#547#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#750#777#0" expanded="true" />
-            <element signature="e#968#995#0" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#186#187#0" expanded="false" />
+            <element signature="e#216#217#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1284,135 +1240,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="388" max-vertical-offset="850">
           <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/wrappers/PositionMessageWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/Cargo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="493">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/ShipInformationError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding>
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/shipservice/ShipInformationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1156">
-          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/PositionMessageMemoryBufferStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="327" max-vertical-offset="1360">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/PositionMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationEachPositionMessageState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="8" column="88" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationOnNewZoneState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/SaveToDatabaseStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="17" column="51" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/QueueFiller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1139">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="799">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessing/etageneration/EtaGenerationState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/InputHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1426,10 +1253,288 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/PositionMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/persistence/memoryDb/PersistenceId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/JDK/src.zip!/java/util/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2547" max-vertical-offset="3247">
+          <caret line="198" column="6" selection-start-line="198" selection-start-column="6" selection-end-line="198" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/Cargo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="493">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/wrappers/PositionMessageWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/wrappers/TimeWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/etageneration/EtaGenerationEachPositionMessageState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="8" column="88" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/etageneration/EtaGenerationOnNewZoneState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/etageneration/EtaGenerationState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/DataProcessingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/InputHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/utils/MarshallUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/etageneration/EtaGenerationStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="271" max-vertical-offset="799">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/MemoryBufferStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/QueueFiller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="35" column="17" selection-start-line="29" selection-start-column="16" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/QueueApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/StringInputHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/rabbitmq/RabbitQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="1581">
+          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/ShipInformationError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/ShipInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="e#1036#1037#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/IncidentActionReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="952">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding>
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#993#994#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/SaveToDatabaseStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5774947" vertical-offset="0" max-vertical-offset="471">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/persistence/memoryDb/SystemOutRepoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.4323144" vertical-offset="180" max-vertical-offset="2346">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/TestEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5349345" vertical-offset="282" max-vertical-offset="867">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="935">
+          <caret line="38" column="73" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/shipservice/ShipInformationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21656051" vertical-offset="0" max-vertical-offset="471">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/shipservice/ShipInformationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="685" max-vertical-offset="1156">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/PositionMessageMemoryBufferStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0545851" vertical-offset="367" max-vertical-offset="1394">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/be/kdg/schelderadarketen/verwerkingseenheid/IncidentFiller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="476">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/domain/models/Incident.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/be/kdg/schelderadarketen/verwerkingseenheid/engine/input/dataprocessingstrategies/IncidentActionStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7834395" vertical-offset="413" max-vertical-offset="986">
+          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

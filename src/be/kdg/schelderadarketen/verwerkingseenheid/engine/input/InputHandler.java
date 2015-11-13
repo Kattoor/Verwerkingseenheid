@@ -1,7 +1,7 @@
 package be.kdg.schelderadarketen.verwerkingseenheid.engine.input;
 
-import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessing.DataProcessingStrategy;
-import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.rabbitmq.Pollable;
+import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessingstrategies.DataProcessingStrategy;
+import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.rabbitmq.QueueApi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +15,6 @@ public interface InputHandler<T1> {
 
     List<DataProcessingStrategy> strategies = new ArrayList<>();
     void inputReceived();
-    void setQueue(Pollable<T1> queue);
+    void setQueueApi(QueueApi<T1> queueApi);
     void addStrategy(DataProcessingStrategy strategy);
 }

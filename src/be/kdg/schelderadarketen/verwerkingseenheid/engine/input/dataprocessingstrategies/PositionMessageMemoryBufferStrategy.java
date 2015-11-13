@@ -1,4 +1,4 @@
-package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessing;
+package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessingstrategies;
 
 import be.kdg.schelderadarketen.verwerkingseenheid.domain.models.PositionMessage;
 import be.kdg.schelderadarketen.verwerkingseenheid.domain.models.ShipInformation;
@@ -52,8 +52,10 @@ public class PositionMessageMemoryBufferStrategy implements MemoryBufferStrategy
 
     @Override
     public void processData(String data) {
+        if (data.contains("<incident>")) return;
+
         /* Map data into object */
-        PositionMessage positionMessage = MarshallUtil.parseMessage(PositionMessage.class, data);
+        PositionMessage positionMessage = MarshallUtil.unmarshall(PositionMessage.class, data);
         /* Wrap object into it's PositionMessageWrapper object */
         PositionMessageWrapper positionMessageWrapper = new PositionMessageWrapper(positionMessage, System.currentTimeMillis());
         /* Reset timers of ships with same id */

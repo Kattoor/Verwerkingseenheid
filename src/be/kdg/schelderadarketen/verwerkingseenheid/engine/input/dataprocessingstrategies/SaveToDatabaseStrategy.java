@@ -1,4 +1,4 @@
-package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessing;
+package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessingstrategies;
 
 import be.kdg.schelderadarketen.verwerkingseenheid.engine.utils.MarshallUtil;
 import be.kdg.schelderadarketen.verwerkingseenheid.persistence.Repository;
@@ -15,7 +15,8 @@ public class SaveToDatabaseStrategy<V> implements DataProcessingStrategy {
 
     @Override
     public void processData(String data) {
-        V v = MarshallUtil.parseMessage(cls, data);
+        if (data.contains("<incident>")) return;
+        V v = MarshallUtil.unmarshall(cls, data);
         repo.create(v);
     }
 }

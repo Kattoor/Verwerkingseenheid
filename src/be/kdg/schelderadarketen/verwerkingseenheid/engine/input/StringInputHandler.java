@@ -1,14 +1,14 @@
 package be.kdg.schelderadarketen.verwerkingseenheid.engine.input;
 
-import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessing.DataProcessingStrategy;
-import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.rabbitmq.Pollable;
+import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessingstrategies.DataProcessingStrategy;
+import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.rabbitmq.QueueApi;
 
 public class StringInputHandler implements InputHandler<String> {
 
-    private Pollable<String> queue;
+    private QueueApi<String> queueApi;
     @Override
-    public void setQueue(Pollable<String> queue) {
-        this.queue = queue;
+    public void setQueueApi(QueueApi<String> queueApi) {
+        this.queueApi = queueApi;
     }
     
     @Override
@@ -18,7 +18,7 @@ public class StringInputHandler implements InputHandler<String> {
 
     @Override
     public void inputReceived() {
-        String data = queue.poll();
+        String data = queueApi.poll();
         strategies.forEach(s -> s.processData(data));
     }
 }
