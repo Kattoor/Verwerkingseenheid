@@ -2,6 +2,8 @@ package be.kdg.schelderadarketen.verwerkingseenheid.persistence.memoryDb;
 
 import be.kdg.schelderadarketen.verwerkingseenheid.persistence.Repository;
 import com.sun.corba.se.impl.io.TypeMismatchException;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -12,6 +14,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class SystemOutRepoImpl<V> implements Repository<V, Integer> {
 
+    private static final Logger logger = LogManager.getLogger(SystemOutRepoImpl.class);
     private List<V> memoryDb;
 
     public SystemOutRepoImpl() {
@@ -23,8 +26,8 @@ public class SystemOutRepoImpl<V> implements Repository<V, Integer> {
         Field idField = getIdField(value);
         try {
             idField.set(value, memoryDb.size());
-            System.out.printf("Wrote value of type [%s] to memory: %s\n", value.getClass().getSimpleName(), value);
             memoryDb.add(value);
+            logger.debug(String.format("Wrote value of type [%s] to memory: %s\n", value.getClass().getSimpleName(), value));
         } catch (IllegalAccessException ignored) {
             /* This never occurs since the idField's modifier is set to accessible in the getIdField method */
         }
@@ -87,6 +90,7 @@ public class SystemOutRepoImpl<V> implements Repository<V, Integer> {
                         return tempKey.equals(key);
                     }).findAny().get();
         } catch (NoSuchElementException e) {
+            logger.error("No such key found: " + key.toString());
             throw new NoSuchElementException(String.format("No such key found: %s", key.toString()));
         }
         return value;

@@ -12,5 +12,6 @@
     <orderEntry type="library" name="rabbitmq-client" level="project" />
     <orderEntry type="library" name="shipservice-1.0" level="project" />
     <orderEntry type="library" name="gson-2.4" level="project" />
+    <orderEntry type="library" name="log4j-1.2.17" level="project" />
   </component>
 </module>

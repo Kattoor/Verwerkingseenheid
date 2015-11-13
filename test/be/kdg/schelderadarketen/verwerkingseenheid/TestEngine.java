@@ -37,8 +37,8 @@ public class TestEngine {
         DataProcessingStrategy bufferStrategy = new PositionMessageMemoryBufferStrategy(shipInformationService, memoryBuffer, 5000);
         DataProcessingStrategy etaGenerationStrategy = new EtaGenerationStrategy(new int[] {1, 2, 3, 4}, new EtaGenerationEachPositionMessageState());
         DataProcessingStrategy incidentActionStrategy = new IncidentActionStrategy(queueApi, shipInformationService, repository);
-        //inputHandler.addStrategy(etaGenerationStrategy);
-        //inputHandler.addStrategy(bufferStrategy);
+        inputHandler.addStrategy(etaGenerationStrategy);
+        inputHandler.addStrategy(bufferStrategy);
         inputHandler.addStrategy(saveToDatabaseStrategy);
         inputHandler.addStrategy(incidentActionStrategy);
         queueApi.initialize();

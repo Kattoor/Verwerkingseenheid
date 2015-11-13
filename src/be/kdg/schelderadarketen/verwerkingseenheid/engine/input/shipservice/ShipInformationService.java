@@ -1,8 +1,8 @@
 package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.shipservice;
 
-import be.kdg.schelderadarketen.verwerkingseenheid.domain.models.ShipInformation;
+        import be.kdg.schelderadarketen.verwerkingseenheid.domain.models.ShipInformation;
 
-import java.io.IOException;
+        import java.io.IOException;
 
 public interface ShipInformationService {
 

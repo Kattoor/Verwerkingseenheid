@@ -12,7 +12,6 @@ import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.shipservice.Ship
 import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.shipservice.UnknownShipIdException;
 import be.kdg.schelderadarketen.verwerkingseenheid.engine.utils.MarshallUtil;
 import be.kdg.schelderadarketen.verwerkingseenheid.persistence.Repository;
-import javafx.geometry.Pos;
 
 import java.io.IOException;
 import java.util.Comparator;
@@ -42,17 +41,16 @@ public class IncidentActionStrategy implements DataProcessingStrategy {
             int previousDistanceToDock = list.get(0).getDistanceToDock();
             String centerId = list.get(0).getCenterId();
             harbor.getIncidents().keySet().forEach(k -> {
-                switch (harbor.getIncidents().get(k).getLockDown()) {
-                    case ALL:
-                        if (positionMessage.getDistanceToDock() != previousDistanceToDock) {
+                if (positionMessage.getDistanceToDock() != previousDistanceToDock) {
+                    switch (harbor.getIncidents().get(k).getLockDown()) {
+                        case ALL:
                             sendOffense(positionMessage, harbor.getIncidents().get(k));
-                        }
-                        break;
-                    case ZONE:
-                        if (harbor.getIncidents().get(k).getZone().equals(centerId) && positionMessage.getDistanceToDock() != previousDistanceToDock) {
-                            sendOffense(positionMessage, harbor.getIncidents().get(k));
-                        }
-                        break;
+                            break;
+                        case ZONE:
+                            if (harbor.getIncidents().get(k).getZone().equals(centerId))
+                                sendOffense(positionMessage, harbor.getIncidents().get(k));
+                            break;
+                    }
                 }
             });
         } else if (data.contains("<incident>")) {

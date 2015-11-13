@@ -3,12 +3,15 @@ package be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessings
 import be.kdg.schelderadarketen.verwerkingseenheid.domain.models.PositionMessage;
 import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.dataprocessingstrategies.DataProcessingStrategy;
 import be.kdg.schelderadarketen.verwerkingseenheid.engine.utils.MarshallUtil;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class EtaGenerationStrategy implements DataProcessingStrategy {
 
+    private final Logger logger = LogManager.getLogger(EtaGenerationStrategy.class);
     private Map<Integer, PositionMessage> ships;
     private EtaGenerationState state;
 
@@ -35,7 +38,7 @@ public class EtaGenerationStrategy implements DataProcessingStrategy {
             if (ships.get(shipId) != null) {
                 String output = state.processData(previousPositionMessage, newPositionMessage);
                 if (output != null)
-                    System.out.println("ETA for ship " + shipId + ": " + output);
+                    logger.info("ETA for ship " + shipId + ": " + output);
             }
             ships.put(shipId, newPositionMessage);
         }

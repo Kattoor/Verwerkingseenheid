@@ -7,6 +7,8 @@ import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.shipservice.Ship
 import be.kdg.schelderadarketen.verwerkingseenheid.engine.input.shipservice.UnknownShipIdException;
 import be.kdg.schelderadarketen.verwerkingseenheid.engine.utils.MarshallUtil;
 import be.kdg.schelderadarketen.verwerkingseenheid.persistence.Repository;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -15,6 +17,7 @@ import java.util.Map;
 
 public class PositionMessageMemoryBufferStrategy implements MemoryBufferStrategy {
 
+    private final Logger logger = LogManager.getLogger(PositionMessageMemoryBufferStrategy.class);
     private ShipInformationService shipInformationService;
     private Repository<PositionMessageWrapper, Integer> memoryBuffer;
     private final int MAX_TIME_IN_BUFFER;
@@ -40,7 +43,7 @@ public class PositionMessageMemoryBufferStrategy implements MemoryBufferStrategy
                             if (shipInformationMap.get(shipId) != null)
                                 shipInformationMap.remove(shipId);
                             memoryBuffer.delete(v.getId());
-                            System.out.println("Ship with id: " + v.getId() + "deleted!");
+                            logger.debug("Ship with id: " + v.getValue().getShipId() + " deleted!");
                         }
                     });
                 } catch (InterruptedException e) {
@@ -65,8 +68,10 @@ public class PositionMessageMemoryBufferStrategy implements MemoryBufferStrategy
             try {
                 ShipInformation shipInformation = shipInformationService.getShipInformation(shipId);
                 shipInformationMap.put(positionMessageWrapper.getValue().getShipId(), shipInformation);
-            } catch (IOException | UnknownShipIdException e) {
-                System.out.println(e.getClass() + ": " + e.getMessage());
+            } catch (IOException e) {
+                logger.error("Couldn't connect to ShipInformationService");
+            } catch (UnknownShipIdException e) {
+                logger.warn("ShipInformationService couldn't find shipId " + shipId);
             }
         } else {
             messagesWithSameShipId.forEach(m -> m.setTime(System.currentTimeMillis()));
