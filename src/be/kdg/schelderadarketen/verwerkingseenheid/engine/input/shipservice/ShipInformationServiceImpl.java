@@ -15,11 +15,14 @@ public class ShipInformationServiceImpl implements ShipInformationService {
     private Map<Integer, ShipInformation> cachedShipInformationMap;
     private int durationCachedShipInfo;
     private long previousMapRefresh;
+    private int connectionFailureAttempts;
+    private int connectionAttempt;
 
-    public ShipInformationServiceImpl(int durationCachedShipInfo) {
+    public ShipInformationServiceImpl(int durationCachedShipInfo, int connectionFailureAttempts) {
         this.durationCachedShipInfo = durationCachedShipInfo;
         previousMapRefresh = System.currentTimeMillis();
         this.shipServiceProxy = new ShipServiceProxy();
+        this.connectionFailureAttempts = connectionFailureAttempts;
         cachedShipInformationMap = new HashMap<>();
     }
 
@@ -38,14 +41,23 @@ public class ShipInformationServiceImpl implements ShipInformationService {
         ShipInformation shipInformation = cachedShipInformationMap.get(shipId);
         if (shipInformation != null) return shipInformation;
 
-        String response = shipServiceProxy.get("www.services4se3.com/shipservice/" + shipId);
-        if (!response.startsWith("{\"error\":")) {
-            shipInformation = GsonDeserializer.deserialize(response, ShipInformation.class);
-            cachedShipInformationMap.put(shipId, shipInformation);
-            return shipInformation;
-        } else {
-            ShipInformationError error = GsonDeserializer.deserialize(response, ShipInformationError.class);
-            throw new UnknownShipIdException(error.getError() + ": " + error.getDescription());
+        try {
+            String response = shipServiceProxy.get("www.services4se3.com/shipservice/" + shipId);
+            connectionAttempt = 0;
+            if (!response.startsWith("{\"error\":")) {
+                shipInformation = GsonDeserializer.deserialize(response, ShipInformation.class);
+                cachedShipInformationMap.put(shipId, shipInformation);
+                return shipInformation;
+            } else {
+                ShipInformationError error = GsonDeserializer.deserialize(response, ShipInformationError.class);
+                throw new UnknownShipIdException(error.getError() + ": " + error.getDescription());
+            }
+        } catch (IOException e) {
+            if (++connectionAttempt == connectionFailureAttempts) {
+                e.printStackTrace();
+                System.exit(1);
+                return null;
+            } else throw new IOException(e);
         }
     }
 }

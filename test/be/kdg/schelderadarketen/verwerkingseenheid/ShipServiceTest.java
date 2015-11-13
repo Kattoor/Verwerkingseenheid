@@ -11,7 +11,7 @@ public class ShipServiceTest {
 
     public static void main(String[] args) throws IOException {
         try {
-            ShipInformationService service = new ShipInformationServiceImpl(10 * 60 * 1000);
+            ShipInformationService service = new ShipInformationServiceImpl(10 * 60 * 1000, 4);
             ShipInformation info = service.getShipInformation(3333333);
             System.out.println(info.getIMO());
             System.out.println(info.getDangereousCargo());
